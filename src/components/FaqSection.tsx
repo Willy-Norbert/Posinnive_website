@@ -64,7 +64,7 @@ const FaqSection: React.FC = () => {
           </div>
           <div className="hidden md:block h-[400px]">
             <img
-              src="/rectangle7.png"
+              src="/Rectangle7.png"
               alt="Girl on swing"
               className="w-full h-full object-cover rounded-lg shadow-md"
             />
