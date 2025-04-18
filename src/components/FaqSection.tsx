@@ -45,7 +45,8 @@ const FaqSection: React.FC = () => {
           <div className="w-90 h-0.5 bg-blue-900 rotate-[-2deg] origin-left" />
         </div>
       </div>
-        <div className="grid md:grid-cols-3 gap-6">
+      <hr className='p-1 border-gray-200 ' />
+        <div className="grid md:grid-cols-3 p-7 gap-6 ">
           <div className="md:col-span-2 h-[400px] overflow-y-scroll pr-2 scrollbar-custom">
             {faqs.map((faq, index) => (
               <div key={index} className={`rounded-md border mb-4 transition-all ${index === 0 ? "bg-gray-100 border-gray-300" : "border-gray-200"}`}>
@@ -70,9 +71,9 @@ const FaqSection: React.FC = () => {
             />
           </div>
         </div>
+        <hr className='border-gray-200 border-1'/>
       </div>
-
-      {/* Custom Scrollbar */}
+   {/* Custom Scrollbar */}
       <style jsx>{`
         .custom-scroll {
           scrollbar-width: thin;
@@ -110,6 +111,7 @@ const FaqSection: React.FC = () => {
           background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='8' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,2 4,6 8,2' fill='%23000000'/%3E%3C/svg%3E");
         }
       `}</style>
+    
     </section>
   );
 };
