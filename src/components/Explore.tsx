@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-const HeroSection: React.FC = () => {
+const Explore: React.FC = () => {
   return (
     <section className="bg-white min-h-[90vh] flex items-center" id="explore">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-5">
@@ -71,7 +71,7 @@ const HeroSection: React.FC = () => {
                 transition={{ duration: 0.3 }}
               />
               <motion.div 
-                className="absolute  md:left-88 left-28 transform -translate-x-1/2 flex items-center justify-center mb-0 mt-10 bottom-[-32px] space-x-2  rounded-full md:bottom-[-8px] "
+                className="absolute  md:left-88 left-28 transform -translate-x-1/2 flex items-center justify-center mb-0 mt-10 bottom-[-32px] space-x-2  rounded-full md:bottom-[-30px] "
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1 }}
@@ -87,4 +87,4 @@ const HeroSection: React.FC = () => {
   );
 };
 
-export default HeroSection;
+export default Explore;

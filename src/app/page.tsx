@@ -1,7 +1,7 @@
 
 // pages/index.tsx
 import Navbar from '@/components/Navbar';
-import HeroSection from '@/components/HeroSection';
+import Explore from '@/components/Explore';
 import LogoSection from '@/components/LogoSection';
 import HowItWorks from '@/components/HowItWorks';
 import OurWork from '@/components/OurWork';
@@ -24,7 +24,7 @@ const HomePage: React.FC = () => {
     <div className="min-h-screen font-sans text-lg" >
       <Navbar />
       <main>
-        <HeroSection />
+        <Explore />
         <LogoSection />
         <HowItWorks />
         <OurWork />
