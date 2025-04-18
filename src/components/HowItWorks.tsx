@@ -19,7 +19,7 @@ const HowItWorks: React.FC = () => {
         <p className="text-sm px-12 text-gray-600 mb-3">Fill out a quick form.</p>
         <div className="w-full h-56 overflow-hidden rounded-xl">
           <Image
-            src="/images/rectangle4.png" // replace with your image path
+            src="/images/Rectangle4.png" // replace with your image path
             alt="Tell Us Your Needs"
             layout="responsive"
             width={400}
@@ -40,7 +40,7 @@ const HowItWorks: React.FC = () => {
         <p className="text-sm text-gray-600 px-12 mb-3">A skilled team starts working.</p>
         <div className="w-full h-56 overflow-hidden rounded-xl">
           <Image
-            src="/images/rectangle5.png" // replace with your image path
+            src="/images/Rectangle5.png" // replace with your image path
             alt="We Match You with Talent"
             layout="responsive"
             width={400}
@@ -61,7 +61,7 @@ const HowItWorks: React.FC = () => {
         <p className="text-sm text-gray-600 px-8 mb-3">We deliver high-quality results affordably.</p>
         <div className="w-full h-56 overflow-hidden rounded-xl">
           <Image
-            src="/images/rectangle6.png" // replace with your image path
+            src="/images/Rectangle6.png" // replace with your image path
             alt="Get Your Solution"
             layout="responsive"
             width={400}
