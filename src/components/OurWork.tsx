@@ -91,7 +91,7 @@ const projects = [
   },
 ];
 
-export default function ProjectCarousel() {
+export default function OurWork() {
   // Fixed configuration for sliding exactly one item at a time
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
@@ -166,7 +166,6 @@ export default function ProjectCarousel() {
                         width={400}
                         height={300}
                         unoptimized={true}
-                        
                       />
                     </div>
                   </div>
