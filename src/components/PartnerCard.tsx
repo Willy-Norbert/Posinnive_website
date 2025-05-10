@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import { cn } from '@/utils/utils';
 import { Card } from '@/components/ui/card';
 import { Partner } from '@/Data/partnersData';
@@ -10,9 +12,28 @@ interface PartnerCardProps {
   style?: React.CSSProperties;
 }
 
+interface DotPosition {
+  top: string;
+  left: string;
+  animationDuration: string;
+  animationDelay: string;
+}
+
 const PartnerCard = ({ partner, className, style }: PartnerCardProps) => {
+  const [dots, setDots] = useState<DotPosition[]>([]);
+
+  useEffect(() => {
+    const generatedDots = Array.from({ length: 5 }).map(() => ({
+      top: `${Math.random() * 100}%`,
+      left: `${Math.random() * 100}%`,
+      animationDuration: `${2 + Math.random() * 3}s`,
+      animationDelay: `${Math.random() * 2}s`,
+    }));
+    setDots(generatedDots);
+  }, []);
+
   return (
-    <Card 
+    <Card
       className={cn(
         "group relative bg-white/5 backdrop-blur-lg border-white/10 p-6 rounded-2xl transition-all duration-700",
         "hover:bg-white/10 hover:border-white/20 hover:shadow-[0_0_50px_rgba(255,255,255,0.1)] overflow-hidden",
@@ -23,18 +44,18 @@ const PartnerCard = ({ partner, className, style }: PartnerCardProps) => {
     >
       {/* Dynamic Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-      
+
       {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(5)].map((_, i) => (
+        {dots.map((dot, i) => (
           <div
             key={i}
             className="absolute w-2 h-2 bg-white/20 rounded-full"
             style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animation: `float ${2 + Math.random() * 3}s linear infinite`,
-              animationDelay: `${Math.random() * 2}s`
+              top: dot.top,
+              left: dot.left,
+              animation: `float ${dot.animationDuration} linear infinite`,
+              animationDelay: dot.animationDelay,
             }}
           />
         ))}
@@ -47,7 +68,7 @@ const PartnerCard = ({ partner, className, style }: PartnerCardProps) => {
           <img
             src={partner.logo}
             alt={`${partner.name} logo`}
-            className="max-h-full w-auto   group-hover:opacity-100 transition-all duration-700 transform group-hover:scale-110"
+            className="max-h-full w-auto group-hover:opacity-100 transition-all duration-700 transform group-hover:scale-110"
           />
         </div>
 
@@ -59,8 +80,8 @@ const PartnerCard = ({ partner, className, style }: PartnerCardProps) => {
           {partner.description}
         </p>
       </div>
-      
-      {/* Interactive Elements */}
+
+      {/* Interactive Arrow */}
       <div className="absolute top-4 right-4 transform translate-x-8 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-700">
         <ArrowUpRight className="w-5 h-5 text-purple-300" />
       </div>

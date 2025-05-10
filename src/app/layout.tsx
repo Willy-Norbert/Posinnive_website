@@ -1,7 +1,5 @@
 import type { Metadata, Viewport } from "next";
-
-import { Geist, Geist_Mono } from 'next/font/google'
-
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 // Load custom Google fonts
@@ -15,7 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// ✅ Correct metadata
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.posinnove.com"),
   title: "Posinnove",
@@ -25,6 +23,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  themeColor: "#ffffff", 
   openGraph: {
     title: "Posinnove",
     description:
@@ -43,14 +42,11 @@ export const metadata: Metadata = {
   },
 };
 
-// Correct way to set viewport
+//  Viewport export is fine
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
 };
-
-// Correct way to set theme color
-export const themeColor = "#ffffff";
 
 // Root layout component
 export default function RootLayout({
