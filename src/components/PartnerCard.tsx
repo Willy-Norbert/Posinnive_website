@@ -1,7 +1,7 @@
 import React from 'react';
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils/utils';
 import { Card } from '@/components/ui/card';
-import { Partner } from '@/lib/partnersData';
+import { Partner } from '@/Data/partnersData';
 import { ArrowUpRight } from 'lucide-react';
 
 interface PartnerCardProps {

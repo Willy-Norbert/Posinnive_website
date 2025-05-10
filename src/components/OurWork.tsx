@@ -1,6 +1,7 @@
 "use client";
 import { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
+import Image from 'next/image'; 
 
 // Updated project data to match the image
 const projects = [
@@ -156,10 +157,16 @@ export default function ProjectCarousel() {
                   {/* Image container with specified dimensions */}
                   <div className="px-4">
                     <div className="relative w-full h-48 rounded-lg overflow-hidden">
-                      <img
+                      <Image
                         src={project.image}
                         alt={project.title}
                         className="w-full h-full object-cover"
+                        loading='lazy'
+                        priority={false}
+                        width={400}
+                        height={300}
+                        unoptimized={true}
+                        
                       />
                     </div>
                   </div>

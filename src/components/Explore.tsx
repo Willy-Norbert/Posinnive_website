@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 const Explore: React.FC = () => {
   return (
     <section className="bg-white min-h-[90vh] flex items-center" id="explore">
@@ -76,7 +77,15 @@ const Explore: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1 }}
               >
-                <img src="/images/Group.png" alt="Active Talents" className="w-14 h-14 object-contain" />
+                <Image 
+                  src="/images/Group.png" 
+                  alt="Talents" 
+                  className="w-14 h-14 object-contain"
+                  priority={false}
+                  loading='lazy'
+                  width={56}
+                  height={56}
+                />
                 <p className="text-gray-800 text-base font-medium">200+ Active Talents</p>
               </motion.div>
             </div>

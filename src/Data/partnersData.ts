@@ -1,3 +1,4 @@
+// /Data/partnersData.ts
 export interface Partner {
   id: string;
   name: string;
@@ -25,19 +26,19 @@ export const partnersData: Partner[] = [
     logo: '/images/alx.png',
   },
   {
-    id: '1',
+    id: '4',
     name: 'Rwanda Coding Academy',
     description: 'Leading provider of enterprise software solutions and digital transformation services.',
     logo: '/images/RCA.png',
   },
   {
-    id: '2',
+    id: '5',
     name: 'University of Rwanda',
     description: 'Innovation-driven research and development partner for cutting-edge technologies.',
     logo: '/images/UR.png',
   },
   {
-    id: '3',
+    id: '6',
     name: 'ALX Technologies',
     description: 'Global technology solutions provider specializing in cloud infrastructure and security.',
     logo: '/images/alx.png',

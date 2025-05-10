@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const LogoSection: React.FC = () => {
   return (
@@ -32,17 +33,41 @@ const LogoSection: React.FC = () => {
         <div className="flex justify-center items-center space-x-16">
   {/* Logo 1 */}
   <div className="w-16 h-16 flex items-center justify-center">
-    <img src="/images/RCA.png" alt="Logo 1" className="w-full h-full object-contain" />
+    <Image
+      src="/images/RCA.png" 
+      alt="Logo 1" 
+      className="w-full h-full object-contain"
+      loading='lazy'
+      priority={false} 
+      width={64}
+      height={64}
+    />
   </div>
 
   {/* Logo 2 */}
   <div className="w-16 h-16 flex items-center justify-center">
-    <img src="/images/UR.png" alt="Logo 2" className="w-full h-full object-contain" />
+    <Image
+      src="/images/UR.png" 
+      alt="Logo 2" 
+      className="w-full h-full object-contain" 
+      loading='lazy'
+      priority={false}
+      width={64}
+      height={64}
+      />
   </div>
 
   {/* Logo 3 */}
   <div className="w-20 h-16 flex items-center justify-center">
-    <img src="/images/alx.png" alt="Logo 3" className="w-full h-full object-contain" />
+    <Image
+      src="/images/alx.png" 
+      alt="Logo 3" 
+      className="w-full h-full object-contain"
+      loading='lazy'
+      priority={false} 
+      width={80}
+      height={64}
+    />
   </div>
 </div>
 

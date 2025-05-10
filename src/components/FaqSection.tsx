@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import {
   Accordion,
   AccordionContent,
@@ -64,10 +65,14 @@ const FaqSection: React.FC = () => {
             ))}
           </div>
           <div className="hidden md:block h-[400px]">
-            <img
+            <Image  
               src="/Rectangle7.png"
               alt="Girl on swing"
               className="w-full h-full object-cover rounded-lg shadow-md"
+              loading='lazy'
+              priority={false}
+              width={400}
+              height={300}
             />
           </div>
         </div>

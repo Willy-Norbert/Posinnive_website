@@ -19,11 +19,12 @@ const HowItWorks: React.FC = () => {
         <p className="text-sm px-12 text-gray-600 mb-3">Fill out a quick form.</p>
         <div className="w-full h-56 overflow-hidden rounded-xl">
           <Image
-            src="/images/Rectangle4.png" // replace with your image path
+            src="/images/Rectangle4.png" 
             alt="Tell Us Your Needs"
-            layout="responsive"
             width={400}
             height={300}
+            loading="lazy"
+            priority={false}
             className="object-cover rounded-lg"
           />
         </div>
@@ -42,7 +43,8 @@ const HowItWorks: React.FC = () => {
           <Image
             src="/images/Rectangle5.png" // replace with your image path
             alt="We Match You with Talent"
-            layout="responsive"
+            loading="lazy"
+            priority={false}
             width={400}
             height={300}
             className="object-cover rounded-lg"
@@ -63,7 +65,8 @@ const HowItWorks: React.FC = () => {
           <Image
             src="/images/Rectangle6.png" // replace with your image path
             alt="Get Your Solution"
-            layout="responsive"
+            loading="lazy"
+            priority={false}
             width={400}
             height={300}
             className="object-cover rounded-lg"
