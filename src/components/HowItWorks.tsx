@@ -3,9 +3,10 @@ import Image from 'next/image';
 const HowItWorks: React.FC = () => {
   return (
 <section className="py-16 md:py-24 px-4 lg:px-8"id='how-it-works'>
-  <h2 className="text-3xl font-bold text-black mb-6 text-start">How It Works</h2>
-
+  <div className="max-w-7xl mx-auto  p-8 "><h2 className="text-3xl container font-bold text-black mb-6 text-start">How It Works</h2></div>
   <div className="max-w-7xl mx-auto bg-gray-100 p-8 rounded-2xl">
+    
+
     <div className="grid grid-cols-12 gap-6">
 
       {/* Step 1 */}
